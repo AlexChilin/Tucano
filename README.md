@@ -1,1 +1,2 @@
 # bnhyh
+print('hello')
