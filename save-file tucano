@@ -8,14 +8,17 @@
     {
       "name": "Player1",
       "cards": "0"
+      "pointes": "0"
     },
     {
       "name": "Player2",
       "cards": "0"
+      "pointes": "0"
     },
     {
       "name": "Player3",
       "cards": "0"
+      "pointes": "0"    
       }
   ],
       "result": [
