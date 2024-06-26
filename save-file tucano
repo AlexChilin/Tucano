@@ -6,13 +6,21 @@
   "current_player_index": 3,
   "players": [
     {
-      "name": "Player1"
+      "name": "Player1",
+      "cards": "0"
     },
     {
-      "name": "Player2" 
+      "name": "Player2",
+      "cards": "0"
     },
     {
-      "name": "Player3"
+      "name": "Player3",
+      "cards": "0"
       }
+  ],
+      "result": [
+      {"Player1" : "0"},
+      {"Player2" : "0"},
+      {"Player3" : "0"},
   ]
 }
