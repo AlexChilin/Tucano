@@ -21,7 +21,8 @@ class Card:
 
     def save(self):
         return json.dumps({'kind': self.kind})
-
+        
+    @staticmethod
     def load(json_str):
         data = json.loads(json_str)
         return Card(data['kind'])
