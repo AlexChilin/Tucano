@@ -5,10 +5,10 @@ class Hand:
     def __repr__(self):
         cards = []
         for i in self.cards:
-            cards.append(i.value)
+            cards.append(value) #какое то значение
         return str(cards)
 
-    def add_card(self, Card):
+    def add_card(self, Card): #добавляет карту на стол
         self.cards.append(Card)
 
     def remove_card(self, Card):
