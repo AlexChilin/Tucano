@@ -1,0 +1,11 @@
+class Card:
+    KINDS: ['pineapple', 'coconut', 'fig', 'orange', 'rambutan', 'pomegranate',
+            'lime', 'avocado', 'carambola', 'acai berry', 'papaya', 'lychee', 'banana']
+    CARD_COUNTS: {'pineapple': 3, 'coconut': 6, 'fig': 4, 'orange': 4, 'rambutan': 5,
+                  'carambola': 5, 'pomegranate': 6, 'avocado': 5, 'lime': 2, 'acai berry': 6,
+                  'papaya': 4, 'lychee': 2, 'banana': 5}
+    kind: str
+    __str__()
+    score(str{kind}, int)
+    save()
+    load(json)
