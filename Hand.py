@@ -11,5 +11,5 @@ class Hand:
     def add_card(self, Card): #добавляет карту на стол
         self.cards.append(Card)
 
-    def remove_card(self, Card):
-        self.cards.remove(Card)
+    #def remove_card(self, Card):
+        #self.cards.remove(Card)
