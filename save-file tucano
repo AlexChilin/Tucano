@@ -3,22 +3,19 @@
   "desk2": "инжир, лайм",
   "desk3": "папайя",
   "cards_count": "54",
-  "current_player_index": 3,
+  "current_player_index": 2,
   "players": [
     {
       "name": "Player1",
-      "cards": "0",
-      "pointes": "0"
+      "cards": []
     },
     {
       "name": "Player2",
-      "cards": "0",
-      "pointes": "0"
+      "cards": []  
     },
     {
       "name": "Player3",
-      "cards": "0",
-      "pointes": "0"    
+      "cards": []    
       }
   ],
       "result": [
