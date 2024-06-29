@@ -1,0 +1,36 @@
+import unittest
+from pravila import *
+class CardTests(unittest.TestCase):
+    def test_init(self):
+        card = Card('avocado')
+        self.assertEqual(card.kind, 'avocado')
+
+    def test_init_invalid_kind(self):
+        with self.assertRaises(ValueError):
+            Card('banana')
+
+    def test_str(self):
+        card = Card('coconut')
+        self.assertEqual(str(card), "Card(kind=coconut)")
+
+    def test_score(self):
+        card = Card('carambola')
+        self.assertEqual(card.score('carambola', 2), 6)
+
+    def test_score_invalid_kind(self):
+        card = Card('avocado')
+        with self.assertRaises(ValueError):
+            card.score('banana', 2)
+
+    def test_save(self):
+        card = Card('pineapple')
+        json_str = card.save()
+        self.assertEqual(json_str, '{"kind": "pineapple"}')
+
+    def test_load(self):
+        json_str = '{"kind": "pinegranate"}'
+        card = Card.load(json_str)
+        self.assertEqual(card.kind, 'pinegranate')
+
+if __name__ == "__main__":
+    unittest.main()
