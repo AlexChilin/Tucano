@@ -183,13 +183,11 @@ class GameState:
 
 class Human(Player):
     def choose_row(self, rows, players):
-        # TODO: Implement the logic for a human player to choose a row
         pass
 
 
 class AI(Player):
     def choose_row(self, rows, players):
-        # TODO: Implement the logic for an AI player to choose a row
         pass
 
 
