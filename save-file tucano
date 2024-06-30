@@ -16,11 +16,10 @@
     {
       "name": "Player3",
       "cards": []    
-      }
-  ],
+      },
       "result": [
       {"Player1" : "0"},
       {"Player2" : "0"},
-      {"Player3" : "0"},
-  ]
-}
+      {"Player3" : "0"}
+    ]
+  }
