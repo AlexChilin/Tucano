@@ -14,3 +14,5 @@ class TestRow(unittest.TestCase):
         cards = self.row.take_cards()
         self.assertEqual(len(cards), 1)
         self.assertEqual(len(self.row.cards), 0)
+if __name__ == '__main__':
+    unittest.main()
