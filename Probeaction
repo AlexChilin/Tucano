@@ -207,21 +207,16 @@ class GameInteractions:
             self.game_state.take_row(self.game_state.current_player, row)
             self.game_state.current_player = (self.game_state.current_player + 1) % len(self.game_state.players)
 
-        # TODO: Implement scoring and determine the winner
 
     def load(self):
-        # TODO: Implement loading of game state from a file
         pass
 
     def request_players(self):
-        # TODO: Implement logic to request the number and type of players
         pass
 
     def print_rows(self):
-        # TODO: Implement logic to print the current state of the rows
         pass
 
     def print_player(self):
-        # TODO: Implement logic to print the current player's hand
         pass
 
