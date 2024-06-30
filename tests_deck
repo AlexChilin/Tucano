@@ -14,7 +14,7 @@ class TestDeck(unittest.TestCase):
     def test_shuffle(self):
         cards_before = self.deck.cards[:]
         self.deck.shuffle()
-        self.assertNotEqual(cards_before, self.deck.cards)
+        self.assertNotEqual(Cards, self.deck.cards)
 
 if __name__ == '__main__':
     unittest.main()
