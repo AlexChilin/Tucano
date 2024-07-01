@@ -6,7 +6,11 @@ class Card:
     CARD_COUNTS: {'pineapple': 3, 'coconut': 6, 'fig': 4, 'orange': 4, 'rambutan': 5,
                   'carambola': 5, 'pomegranate': 6, 'avocado': 5, 'lime': 2, 'acai berry': 6,
                   'papaya': 4, 'lychee': 2, 'banana': 5}
-   def __init__(self, kind):
+    CARD_BONUS = {'pineapple': (0, -2, -4), 'coconut': (8, 6, 4, 2, 0, -2), 'fig': (-2, 0, 9, 16),'orange': (4 , 8, 12, 0),
+                  'rambutan': (3, 6, 9, 12 ,15), 'lime': (-2, -8), 'avocado': (3, 6, 9, 12 ,15), 'carambola': (1, 3, 6, 10, 15),
+                  'acai berry': (1, 2, 3, 5, 8, 13), 'lychee': (5, 12)} #и так далее
+
+    def __init__(self, kind):
         if kind not in self.KINDS:
             raise ValueError(f"Invalid card kind: {kind}")
         self.kind = kind
@@ -21,7 +25,7 @@ class Card:
 
     def save(self):
         return json.dumps({'kind': self.kind})
-        
+
     @staticmethod
     def load(json_str):
         data = json.loads(json_str)
