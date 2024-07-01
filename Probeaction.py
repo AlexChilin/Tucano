@@ -35,7 +35,7 @@ class Card:
                   'papaya': 4, 'lychee': 2, 'banana': 5}
     CARD_BONUS = {'pineapple': (0, -2, -4), 'coconut': (8, 6, 4, 2, 0, -2), 'fig': (-2, 0, 9, 16),'orange': (4 , 8, 12, 0),
                   'rambutan': (3, 6, 9, 12 ,15), 'lime': (-2, -8), 'avocado': (3, 6, 9, 12 ,15), 'carambola': (1, 3, 6, 10, 15),
-                  'acai berry': (1, 2, 3, 5, 8, 13), 'lychee': (5, 12), banana: (2 ,4 , 6, 8, 10)} #и так далее
+                  'acai berry': (1, 2, 3, 5, 8, 13), 'lychee': (5, 12)} #и так далее
 
     def __init__(self, kind):
         if kind not in self.KINDS:
