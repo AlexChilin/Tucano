@@ -1,5 +1,5 @@
 import unittest
-from pravila import *
+from Card import *
 class CardTests(unittest.TestCase):
     def test_init(self):
         card = Card('coconut')
