@@ -1,6 +1,6 @@
 {
-  "desk1": "ананас",
-  "desk2": "инжир, лайм",
+  "desk1": "pineapple",
+  "desk2": "инжир, lime",
   "desk3": "папайя",
   "cards_count": "54",
   "current_player_index": 2,
@@ -8,17 +8,17 @@
     {
       "name": "Player1",
       "cards": [],
-      "hand" : "acai berry, coconut, avocado, fig, banana"
+      "hand" : ["acai berry", "coconut", "avocado", "fig", "banana"]
     },
     {
       "name": "Player2",
       "cards": [],
-      "hand" : "pineapple, carambola, avocado, lime, banana"
+      "hand" : ["pineapple", "carambola", "avocado", "lime", "banana"]
     },
     {
       "name": "Player3",
       "cards": [],
-      "hand" : "acai berry, rambutan, papaya, carambola, banana"
+      "hand" : ["acai berry", "rambutan", "papaya", "carambola", "banana"]
       },
       "result": [
       {"Player1" : "0"},
