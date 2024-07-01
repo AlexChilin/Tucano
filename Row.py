@@ -1,3 +1,6 @@
+import json
+from Card import *
+
 class Row:
     def __init__(self):
         self.cards = []
