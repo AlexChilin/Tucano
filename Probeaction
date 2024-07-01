@@ -34,6 +34,8 @@ class Card:
     CARD_COUNTS: {'pineapple': 3, 'coconut': 6, 'fig': 4, 'orange': 4, 'rambutan': 5,
                   'carambola': 5, 'pomegranate': 6, 'avocado': 5, 'lime': 2, 'acai berry': 6,
                   'papaya': 4, 'lychee': 2, 'banana': 5}
+CARD_BONUS = {'pineapple': (0, -2, -4), 'coconut': (8, 6, 4, 2, 0, -2, 'fig': (-2, 0, 9, 16),'orange': (4 , 8, 12, 0),
+              'rambutan': (3, 6, 9, 12 ,15} #и так далее
 
 
     def __init__(self, kind):
@@ -103,8 +105,8 @@ class Row:
         self.cards.append(card)
 
     def take_cards(self):
-        cards = self.cards
-        self.cards = []
+        cards = self.cards.copy()
+        self.cards.clear()
         return cards
 
     def save(self):
@@ -161,7 +163,8 @@ class GameState:
         self.players[player].hand.add_cards(cards)
 
     def save(self):
-        return json.dumps({
+        with open('save-file.json', 'w', encoding = 'utf-8') as f:
+        json.dumps({
             'players': [player.save() for player in self.players],
             'current_player': self.current_player,
             'rows': [row.save() for row in self.rows],
