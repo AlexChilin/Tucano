@@ -1,5 +1,5 @@
 import unittest
-from card import card
+from Card import card
 
 class TestCard(unittest.TestCase):
 
@@ -21,6 +21,7 @@ class TestCard(unittest.TestCase):
     def test_invalid_kind(self):
         with self.assertRaises(ValueError):
             test_card = card('mango')
+
 
 if __name__ == '__main__':
     unittest.main()
