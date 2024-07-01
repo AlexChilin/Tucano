@@ -19,5 +19,3 @@ def test_deck():
     saved_deck = deck.save()
     new_deck = Deck.load(saved_deck)
     assert new_deck.remaining_cards() == deck.remaining_cards()
-    # Дополнительно можно добавить проверку на равенство карт в колодах
-
