@@ -163,7 +163,7 @@ class GameState:
         self.players[player].hand.add_cards(cards)
 
     def save(self):
-        with open('save-file.json', 'w', encoding = 'utf-8') as f:
+        with open('savefile.json', 'w', encoding = 'utf-8') as f:
         json.dumps({
             'players': [player.save() for player in self.players],
             'current_player': self.current_player,
@@ -223,3 +223,4 @@ class GameInteractions:
     def print_player(self):
         pass
 
+print('ok')
