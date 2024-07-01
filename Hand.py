@@ -18,10 +18,10 @@ class Hand:
             self.cards.append(cards)
 
     def score(self):
-        pointes = 0
+        points = 0
         for card in self.cards:
-            pointes += card.point
-        return pointes
+            points += card.point
+        return points
 
     def save(self):
         return json.dumps({'cards': [card.save() for card in self.cards]})
