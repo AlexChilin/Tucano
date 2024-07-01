@@ -1,3 +1,5 @@
+from Card import *
+
 class Hand:
     def __init__(self):
         self.cards = []
@@ -5,11 +7,11 @@ class Hand:
     def __repr__(self):
         cards = []
         for i in self.cards:
-            cards.append(value) #какое то значение
+            cards.append(value)
         return str(cards)
 
-    def add_card(self, Card): #добавляет карту на стол
-        self.cards.append(Card)
+    def add_card(self, cards):
+        for card in cards:
+            self.cards.append(Card)
 
-    #def remove_card(self, Card):
-        #self.cards.remove(Card)
+    
