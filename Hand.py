@@ -20,7 +20,7 @@ class Hand:
     def score(self):
         pointes = 0
         for card in self.cards:
-            pointes += i.point
+            pointes += card.point
         return pointes
 
     def save(self):
