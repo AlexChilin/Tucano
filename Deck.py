@@ -1,4 +1,4 @@
-rom random import shuffle
+from random import shuffle
 import json
 from Card import *
 
