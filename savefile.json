@@ -7,15 +7,18 @@
   "players": [
     {
       "name": "Player1",
-      "cards": []
+      "cards": [],
+      "hand" : "acai berry, coconut, avocado, fig, banana"
     },
     {
       "name": "Player2",
-      "cards": []  
+      "cards": [],
+      "hand" : "pineapple, carambola, avocado, lime, banana"
     },
     {
       "name": "Player3",
-      "cards": []    
+      "cards": [],
+      "hand" : "acai berry, rambutan, papaya, carambola, banana"
       },
       "result": [
       {"Player1" : "0"},
