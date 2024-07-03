@@ -1,11 +1,11 @@
-from Deck import *
-from Card import *
+from Deck import Deck
+from Card import Card
 
 def test_deck():
     deck = Deck()
-    card1 = Card('Hearts', 'A')
-    card2 = Card('Diamonds', '10')
-    deck.cards = [card1, card2]
+    card1 = Card()
+    card2 = Card()
+    deck.cards = []
 
     assert deck.remaining_cards() == 2
 
