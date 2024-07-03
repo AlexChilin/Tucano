@@ -3,8 +3,6 @@ from Hand import Hand
 from Card import Card
 
 
-class TestHand(unittest.TestCase):
-
     def test_add_cards(self):
         hand = Hand()
         card1 = Card('fig', 'lime')
