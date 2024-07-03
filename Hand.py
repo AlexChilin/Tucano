@@ -7,11 +7,8 @@ class Hand:
     def __str__(self):
         return ' '.join(str(card) for card in self.cards)
 
-    #def __repr__(self):
-        #cards = []
-        #for i in self.cards:
-            #cards.append(i.value)
-        #return str(cards)
+    def __repr__(self):
+        return ', '.join(str(card) for card in self.cards)
 
     def add_cards(self, cards):
         for card in cards:
