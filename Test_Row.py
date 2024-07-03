@@ -2,7 +2,6 @@ import unittest
 from row import row
 from card import card
 
-class TestRow(unittest.TestCase):
 
     def setUp(self):
         self.test_row = row()
