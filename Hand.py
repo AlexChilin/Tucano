@@ -1,26 +1,32 @@
-from Card import *
+from Card import Card
+import json
+
 
 class Hand:
     def __init__(self):
         self.cards = []
 
     def __str__(self):
+        return ', '.join(str(card) for card in self.cards)
+
+    def __repr__(self):
         return ' '.join(str(card) for card in self.cards)
 
-    def __repr__(self):
-        return ', '.join(str(card) for card in self.cards)
-
-    def __repr__(self):
-        return ', '.join(str(card) for card in self.cards)
-
     def add_cards(self, cards):
-        for card in cards:
+        for _ in cards:
             self.cards.append(cards)
 
+    def get_dictionary(self):
+        card_counts = dict()
+        for c in self.cards:
+            card_counts[c] += 1
+            return card_counts
+
     def score(self):
+        card_counts = self.get_dictionary()
         points = 0
-        for card in self.cards:
-            points += card.point
+        for c, m in card_counts.items():
+            points += Card.score(c, m)
         return points
 
     def save(self):
@@ -33,5 +39,6 @@ class Hand:
         hand = cls()
         hand.add_cards(cards)
         return hand
+
 
     
