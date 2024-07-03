@@ -1,5 +1,4 @@
 import unittest
-from unittest.mock import MagicMock
 from row import row
 from card import card
 
@@ -9,7 +8,7 @@ class TestRow(unittest.TestCase):
         self.test_row = row()
 
     def test_add_card(self):
-        test_card = MagicMock(name='card')
+        test_card = (name='card')
         self.test_row.add_card(test_card)
 
         self.assertIn(test_card, self.test_row.cards)
