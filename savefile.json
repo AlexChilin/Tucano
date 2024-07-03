@@ -3,7 +3,7 @@
   "desk3": "папайя",
   "cards_count": "54",
   "current_player_index": 3,
-  "rows": [lime, papaya, banana, acai berry],
+  "rows": ["lime", "papaya", "banana", "acai berry"],
   "players": [
     {
       "name": "Player1",
