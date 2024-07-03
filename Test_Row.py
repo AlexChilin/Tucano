@@ -13,7 +13,7 @@ from card import card
         self.assertIn(test_card, self.test_row.cards)
 
     def test_take_cards(self):
-        test_card = MagicMock(name='card')
+        test_card = (name='card')
         self.test_row.add_card(test_card)
 
         cards = self.test_row.take_cards()
