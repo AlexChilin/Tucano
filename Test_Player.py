@@ -2,7 +2,6 @@ import unittest
 from player import Player
 from hand import Hand
 
-class TestPlayer(unittest.TestCase):
 
     def test_init(self):
         hand = Hand([])
