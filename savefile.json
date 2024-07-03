@@ -1,28 +1,23 @@
-{ "desk": "pomegranate, lime",
-  "cards_count": "54",
+{ "desk": ["pomegranate, lime"],
   "current_player_index": 3,
-  "rows": ["lime", "papaya", "banana", "acai berry"],
+  "rows": [["lime", "papaya", "banana", "acai berry"], ["lime", "banana"], ["fig", "papaya"]],
   "players": [
     {
       "name": "Player1",
-      "cards": [],
       "hand" : ["acai berry", "coconut", "avocado", "fig", "banana"]
     },
     {
       "name": "Player2",
-      "cards": [],
       "hand" : ["pineapple", "carambola", "avocado", "lime", "banana"]
     },
     {
       "name": "Player3",
-      "cards": [],
       "hand" : ["acai berry", "rambutan", "papaya", "carambola", "banana"]
-      },
-    {
+      }
+      ],
       "result": [
       {"Player1" : "0"},
       {"Player2" : "0"},
       {"Player3" : "0"}
     ]
-      
 }
