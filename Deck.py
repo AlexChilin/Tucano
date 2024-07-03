@@ -1,6 +1,6 @@
 from random import shuffle
 import json
-from Card import *
+from Card import Card
 
 
 class Deck:
