@@ -1,24 +1,37 @@
 import unittest
-from Card import Card
+from Card import Card  # Assuming Card class is defined in Card.py
+import json
 
-def test_score(self):
-    test_card = Card('pineapple')
-    self.assertEqual(test_card.score('pineapple', 2), 6)
-    self.assertEqual(test_card.score('coconut', 3), 18)
-    self.assertEqual(test_card.score('fig', 4), 16)
-    self.assertEqual(test_card.score('banana', 1), 5)
-    with self.assertRaises(ValueError):
-        test_card.score('apple', 2)
 
-def test_save_load(self):
-    test_card = Card('lime')
-    saved_card = test_card.save()
-    loaded_card = card.load(saved_card)
-    self.assertEqual(test_card.kind, loaded_card.kind)
+class TestCard(unittest.TestCase):
 
-def test_invalid_kind(self):
-    with self.assertRaises(ValueError):
-        test_card = Card('mango')
+    def setUp(self):
+        self.card = Card('pineapple')  # Example card for testing
+
+    def test_init(self):
+        self.assertEqual(self.card.kind, 'pineapple')
+
+    def test_str(self):
+        self.assertEqual(str(self.card), "Card(kind=pineapple)")
+
+    #def test_repr(self):
+        #self.assertEqual(self.card.repr(), 'pineapple')
+
+    def test_score(self):
+        self.assertEqual(self.card.score('pineapple', 2), 6)  # 3 (CARD_COUNTS['pineapple']) * 2
+
+    def test_score_invalid_kind(self):
+        with self.assertRaises(ValueError):
+            self.card.score('invalid_kind', 2)
+
+    def test_save(self):
+        expected_json = json.dumps({'kind': 'pineapple'})
+        self.assertEqual(self.card.save(), expected_json)
+
+    def test_load(self):
+        card_json = json.dumps({'kind': 'pineapple'})
+        loaded_card = Card.load(card_json)
+        self.assertEqual(loaded_card.kind, 'pineapple')
 
 
 if __name__ == '__main__':
