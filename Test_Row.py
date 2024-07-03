@@ -1,36 +1,39 @@
 import unittest
-from row import row
-from card import card
+from Card import Card
+from Row import Row
+import json
 
 
+class TestRow(unittest.TestCase):
     def setUp(self):
-        self.test_row = row()
+        self.row = Row()
+        self.card1 = Card('pineapple')
+        self.card2 = Card('coconut')
+        self.row.add_card(self.card1)
+        self.row.add_card(self.card2)
 
     def test_add_card(self):
-        test_card = (name='card')
-        self.test_row.add_card(test_card)
-
-        self.assertIn(test_card, self.test_row.cards)
+        self.assertEqual(len(self.row.cards), 2)
 
     def test_take_cards(self):
-        test_card = (name='card')
-        self.test_row.add_card(test_card)
+        taken_cards = self.row.take_cards()
+        self.assertEqual(len(taken_cards), 2)
+        self.assertEqual(taken_cards[0].kind, 'pineapple')
+        self.assertEqual(taken_cards[1].kind, 'coconut')
+        self.assertEqual(len(self.row.cards), 0)
 
-        cards = self.test_row.take_cards()
+    def test_save(self):
+        expected_json = json.dumps({'cards': [self.card1.save(), self.card2.save()]})
+        self.assertEqual(self.row.save(), expected_json)
 
-        self.assertEqual(cards, [test_card])
-        self.assertEqual(self.test_row.cards, [])
+    def test_load(self):
+        json_data = json.dumps({'cards': [self.card1.save(), self.card2.save()]})
+        loaded_row = Row.load(json_data)
+        self.assertEqual(len(loaded_row.cards), 2)
+        self.assertEqual(loaded_row.cards[0].kind, 'pineapple')
+        self.assertEqual(loaded_row.cards[1].kind, 'coconut')
 
-    def test_save_and_load(self):
-        test_card = card('Test Name', 'Test Type')
-        self.test_row.add_card(test_card)
-
-        saved_data = self.test_row.save()
-        loaded_row = row.load(saved_data)
-
-        self.assertEqual(len(loaded_row.cards), 1)
-        self.assertEqual(loaded_row.cards[0].name, 'Test Name')
-        self.assertEqual(loaded_row.cards[0].type, 'Test Type')
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main()#Работает!
+
