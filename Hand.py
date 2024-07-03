@@ -10,6 +10,9 @@ class Hand:
     def __repr__(self):
         return ', '.join(str(card) for card in self.cards)
 
+    def __repr__(self):
+        return ', '.join(str(card) for card in self.cards)
+
     def add_cards(self, cards):
         for card in cards:
             self.cards.append(cards)
