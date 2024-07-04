@@ -1,4 +1,4 @@
-from Hand import *
+from Hand import Hand
 
 
 class Player:
@@ -12,7 +12,7 @@ class Player:
             cards += f'{i.value} '
         return f'{self.name}: {cards}'
 
-    def choose_row(self, rows, players):
+    def choose_row(self, rows: list[Row], players: list[Player]):
         pass
 
     def save(self):
