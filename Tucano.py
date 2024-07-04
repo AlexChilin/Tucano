@@ -22,7 +22,7 @@ class Card:
         return f"Card(kind={self.kind})"
 
     @staticmethod
-    def score(kind, multiplier, leader):
+    def score(kind, multiplier):
         if kind not in Card.KINDS:
             raise ValueError(f"Invalid card kind: {kind}")
         return Card.CARD_COUNTS[kind] * multiplier
@@ -99,7 +99,7 @@ class Player:
     def __str__(self):
         return f'{self.name}'
 
-    def choose_row(self, rows, players: list['Player']):
+    def choose_row(self, rows, players):
         return self.actor.choose_row(self, rows, players)
 
     def save(self):
@@ -293,11 +293,11 @@ class GameInteractions:
     def start_new_game(cls):
         count_players = 0
         while not 1 < count_players <= cls.MAX_PLAYERS:
-            count_players = int(input(f'Введите количество игроков (2 =< n =< {cls.MAX_PLAYERS}): '))
+            count_players = int(input(f'Enter the number of players (2 =< n =< {cls.MAX_PLAYERS}): '))
 
         count_humans = -1
         while not 0 <= count_humans <= count_players:
-            count_humans = int(input(f'Введите число людей (0 =< n =< {count_players}): '))
+            count_humans = int(input(f'Enter the number of players (0 =< n =< {count_players}): '))
 
         players = []
         for i in range(count_humans):
