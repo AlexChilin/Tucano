@@ -20,7 +20,7 @@ class Hand:
         card_counts = dict()
         for c in self.cards:
             card_counts[c] += 1
-            return card_counts
+        return card_counts
 
     def score(self):
         card_counts = self.get_dictionary()
