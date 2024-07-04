@@ -4,11 +4,8 @@ from Card import Card
 
 
     def test_add_cards(self):
-        hand = Hand()
-        card1 = Card('fig', 'lime')
-        card2 = Card('lime', 'pineapple')
-
-        hand.add_cards([card1, card2])
+        hand = Hand([Card('banana'), Card('banana')])
+        hand.add_cards([Card('acai berry'), Card('avocado')])
 
         self.assertEqual(len(hand.cards), 2)
         self.assertIn(card1, hand.cards)
@@ -16,11 +13,9 @@ from Card import Card
 
     def test_score(self):
         hand = Hand()
-        card1 = Card('rambutan', 'acai berry')
-        card2 = Card('orange', 'banana')
-
+        card1 = Hand(Card('rambutan'), Card('acai berry'))
+        card2 = Hand(Card('orange'), Card('banana'))
         hand.add_cards([card1, card2])
-
         self.assertEqual(hand.score(), 17)
 
 
